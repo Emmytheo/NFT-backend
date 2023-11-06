@@ -4,7 +4,8 @@
   "public": "./public/",
   "origins": [
     "http://localhost:3030",
-    "http://localhost:5173"
+    "http://localhost:5173",
+    "https://chainmailhub.com"
   ],
   "paginate": {
     "default": 10,
