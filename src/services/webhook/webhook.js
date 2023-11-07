@@ -13,6 +13,7 @@ import {
 } from './webhook.schema.js'
 import { WebhookService, getOptions } from './webhook.class.js'
 import { webhookPath, webhookMethods } from './webhook.shared.js'
+import { testMail } from '../../hooks/test-mail.js'
 
 export * from './webhook.class.js'
 export * from './webhook.schema.js'
@@ -35,7 +36,7 @@ export const webhook = (app) => {
       all: [schemaHooks.validateQuery(webhookQueryValidator), schemaHooks.resolveQuery(webhookQueryResolver)],
       find: [],
       get: [],
-      create: [schemaHooks.validateData(webhookDataValidator), schemaHooks.resolveData(webhookDataResolver)],
+      create: [schemaHooks.validateData(webhookDataValidator), schemaHooks.resolveData(webhookDataResolver), testMail],
       patch: [schemaHooks.validateData(webhookPatchValidator), schemaHooks.resolveData(webhookPatchResolver)],
       remove: []
     },

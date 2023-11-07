@@ -1,3 +1,5 @@
+import { mail } from './mail/mail.js'
+
 import { blockchains } from './blockchains/blockchains.js'
 
 import { webhook } from './webhook/webhook.js'
@@ -15,6 +17,8 @@ import { wallet } from './wallet/wallet.js'
 import { user } from './users/users.js'
 
 export const services = (app) => {
+  app.configure(mail)
+
   app.configure(blockchains)
 
   app.configure(webhook)

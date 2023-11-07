@@ -11,7 +11,8 @@
     "default": 10,
     "max": 50
   },
-  "mongodb": "mongodb+srv://alena5marley:IGH12PJdSLjuP1Lu@o-network.dpskbrr.mongodb.net/arteslux-backend?retryWrites=true&w=majority",
+  // "mongodb": "mongodb+srv://alena5marley:IGH12PJdSLjuP1Lu@o-network.dpskbrr.mongodb.net/arteslux-backend?retryWrites=true&w=majority",
+  "mongodb": "mongodb://127.0.0.1:27017/arteslux-backend",
   "authentication": {
     "entity": "user",
     "service": "users",

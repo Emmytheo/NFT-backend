@@ -5,12 +5,12 @@ import { TatumApi } from '../tatumApi.js'
 const apiKey = 't-652536d1b1499c0020538171-48ca5802eb1141db991e3eaa'
 const tatumApi = new TatumApi(apiKey)
 
-const tatum = await TatumSDK.init({
-  network: Network.ETHEREUM,
-  apiKey: {
-    v4: apiKey
-  }
-})
+// const tatum = await TatumSDK.init({
+//   network: Network.ETHEREUM,
+//   apiKey: {
+//     v4: apiKey
+//   }
+// })
 
 export const createBlockchain = async (context) => {
   const newBlockchain = await tatumApi.genBlockchain(

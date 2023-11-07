@@ -1,6 +1,8 @@
 // For more information about this file see https://dove.feathersjs.com/guides/cli/client.html
 import { feathers } from '@feathersjs/feathers'
 import authenticationClient from '@feathersjs/authentication-client'
+import { mailClient } from './services/mail/mail.shared.js'
+
 import { blockchainsClient } from './services/blockchains/blockchains.shared.js'
 
 import { webhookClient } from './services/webhook/webhook.shared.js'
@@ -47,6 +49,8 @@ export const createClient = (connection, authenticationOptions = {}) => {
   client.configure(webhookClient)
 
   client.configure(blockchainsClient)
+
+  client.configure(mailClient)
 
   return client
 }
